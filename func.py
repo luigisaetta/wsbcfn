@@ -10,7 +10,8 @@ import scorefn
 model = scorefn.load_model()
 
 def handler(ctx, data: io.BytesIO=None):
-
+    logging.getLogger().info("WSBC: vers. 1.1")
+    
     try:
         input = json.loads(data.getvalue())['input']
 
