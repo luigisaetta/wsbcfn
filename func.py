@@ -16,7 +16,7 @@ def handler(ctx, data: io.BytesIO=None):
 
         # logga l'input, per poter controllare
         input_json = json.dumps(input)
-        logging.getLogger().info("Invoked with input %s", input_json)
+        logging.getLogger().info("WSBC: Invoked with input %s", input_json)
 
         prediction = scorefn.predict(model, input)
     except (Exception, ValueError) as ex:
